@@ -28,11 +28,7 @@ Choose MYSQL Server x64 and Connector/ODBC 8.0 x64
 Set a Password. I recommend `rootroot`. Does not need to be safe. It will be stored in plaintext!
 ![Set Password](images/install3.jpg)
 
-Now download this app
-
-### Developer install
-- pyodbc
-- pyinstaller
+Now download the app
 
 ## First Startup
 On startup, you will see the connection window
