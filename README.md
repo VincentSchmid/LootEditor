@@ -5,27 +5,27 @@ Helps with Visualizing end editing Loot. Has some Automatic functions for Loot d
 - Visualize loot as a list from database
 - Automatically creates Sub-types for weapon items and links items that are used together (guns, ammo, mags,...)
 - Easily edit Loot Manually thanks to subtypes and item linking
-- Set Rarity of item
+- Set Rarity of items
 - Automatically generate distributions based on Rarity
-- Set the appearance of linked items (example: if a gun is rare, the ammo is also rare)
+- distribute linked items (example: if a gun is rare, the ammo is also rare)
+- generated file to have guns spawn with attachements
 - Export back to types.xml
 
 ![main window](images/frontend.png)
 
 Built upon a MySQL database that will be automatically generated and some manual editing of item links.
-written in python.
 
 ## Install
 first off you need MYSQL x64 Server and ODBC Driver 8.0 x64  
 Download the installer [here](https://dev.mysql.com/downloads/windows/installer/8.0.html) the 20mb Version (no account needed scroll to the bottom of the page to download)  
 
-For minimal installation choose these settings:
+For a minimal installation choose these settings (where there is no screenshot leave at default):
 ![Custom Installation](images/install1.jpg)
 
 Choose MYSQL Server x64 and Connector/ODBC 8.0 x64
 ![MYSQL Server and ODBC 8.0](images/install2.jpg)
 
-Set a Password. I recommend `rootroot`. Does not need to be safe. It will be stored in plaintext!
+Set a Password. I recommend something as simple as `rootroot`. Does not need to be safe. It will be stored in plaintext!
 ![Set Password](images/install3.jpg)
 
 Now download the app
@@ -37,7 +37,7 @@ On startup, you will see the connection window
 
 1. Set the password to the one you set during the setup of the Database Server
 2. Choose "Create New", set a database Name eg. server name, choose a types XML to fill the database for the first time
-2. If you already created a database choose Use Existing, enter the name of the database and click Create/Test to test the connection
+2. If you already created a database choose "Use Existing", enter the name of the database and click Create/Test to test the connection
 3. Click Create/Test it will create a new Database
 4. You will see connection Success if everything worked
 5. Click Set and now you're all set and can start editing your Loot
@@ -87,13 +87,13 @@ This is useful for the spawning of the item with attachments and for distributin
 ![item Linker](images/itemLinker.png)
 
 The left list is for the parent object like the weapon. 
-The list in the center is a list of all items here you can look for the item you want to link to the parent item.
-The list on the right shows all items that are linked to the selected parent object. The parent object will appear there too and this is fine.
+The list in the center is a list of all items. Here you can look for the item you want to link to the parent item.
+The list on the right shows all items that are linked to the selected parent object. The parent object will also be listed.
 
 1. select a parent item in the left list
-2. find the item that is linked in the center list by entering the item name in the search bar below use filter setting to help narrow your search
+2. find the item that is linked in the center list by entering the item classname in the search bar below, use filter the settings to help narrow your search.
 3. double click the item to add it to the parent item as a linked item
-4. when done simply close the window, it saves progress automatically
+4. when done simply close the window, it will save your progress automatically
 
 ### Mod Selector
 Ticking mod names in the "Mods in use" menu will remove the items from that mod.
@@ -109,24 +109,24 @@ The Rarity types have multipliers assigned to them:
 | Rarity             | Multiplier |
 | ------------------ | ---------- |
 | undefined          | NaN        | 
-| Legendary | 1 | 
-| Extremely Rare | 1.5 | 
-| Very Rare | 2 | 
-| Rare | 2.5 | 
-| Somewhat Rare | 3 | 
-| Uncommon | 5 | 
-| Common | 8 | 
-| Very Common | 12 | 
-| All Over The Place | 20 | 
+| Legendary          | 1          | 
+| Extremely Rare     | 1.5        | 
+| Very Rare          | 2          | 
+| Rare               | 2.5        | 
+| Somewhat Rare      | 3          |
+| Uncommon           | 5          | 
+| Common             | 8          | 
+| Very Common        | 12         | 
+| All Over The Place | 20         | 
 
 ### Rarity Distribution
 This method isn't perfect it will only be a rough distribution to work with. You will have to adjust the loot after distribution  
 ![Distribution](images/Distrib.png)  
 1. Set the rarity for all items of the type you want to distribute (undefined items will be ignored)
 2. In the dropdown menu select the item type to distribute.
-3. set Target Nominal. it's the nominal amount of all items of this type (excluding the items with "undefined" as rarity).
+3. set Target Nominal. it's the nominal amount of all items combined of this type (excluding the items with "undefined" as rarity).
 4. Only for guns: if Ammo or Mags is ticked the mags and ammo will also be distributed based on gun rarity. For example, if many guns use STANAG it will spawn more often. Same for ammo types.
-5. Click Distribute. This will take a while (working on this), it will still be faster than you doing all of this by hand!
+5. Click Distribute. This will take a while (working on this), it will still be faster than you doing all of this by hand ;)
 6. Sometimes the nominals don't match what you set them to. Just select the items and edit them with the multiplier slider.
 
 ### Loot Multiplier
