@@ -15,6 +15,7 @@ Helps with Visualizing end editing Loot. Has some Automatic functions for Loot d
 
 Built upon a MySQL database that will be automatically generated and some manual editing of item links.
 
+
 ## Install
 first off you need MYSQL x64 Server and ODBC Driver 8.0 x64  
 Download the installer [here](https://dev.mysql.com/downloads/windows/installer/8.0.html) the 20mb Version (no account needed scroll to the bottom of the page to download)  
@@ -155,3 +156,7 @@ it will show all items that can be attached to the item or are associated with i
 ![](images/InfoBar.png)
 
 this shows overall nominal added up for all gun, mags... as well as the change since you started the program. So you can check if you overall increased or decreased the loot count
+
+
+## Credit
+Icon made by Freepik from www.flaticon.com
