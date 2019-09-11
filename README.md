@@ -57,6 +57,10 @@ Enter a keyword in the Name entry top left and press enter.
 ### Export types.xml
 1. In the menubar click file > export types.xml
 
+### Loading Trader File
+The loading of the trader file will set the prices of the items, aswell as the subtypes.  
+For example if you have a handgun category in you trader file, all the items in that category will get the handgun subtype.
+
 ### Saving and loading of Databases and types.xml
 You can save the current state of the database by exporting it. it will save all items and links.  
 If you load a database the current one will be overwritten.  
@@ -95,6 +99,20 @@ The list on the right shows all items that are linked to the selected parent obj
 2. find the item that is linked in the center list by entering the item classname in the search bar below, use filter the settings to help narrow your search.
 3. double click the item to add it to the parent item as a linked item
 4. when done simply close the window, it will save your progress automatically
+
+### Trader Editor
+![Trader Editor](images/traderWindow.png)
+On the left you see all subtypes in the database, you can create new ones by changeing the subtypes of items.  
+On the right all items with the selected subtype are listed.  
+If the Checkbox to the left of each item name is checked, the item will be exclude and will not appear in the generated trader category.  This will not delete the item from the database.  
+  
+By setting "Use Rarity" or "Use Nominal" you can set how the pricing will be distributed. Only use rarity if you have set the rarity of all items of that subtype.
+
+first click Distribute Pricing.  
+Then Update Changes and Copy to Clipboard.
+If you forget to Update Changes, your progress will be lost.
+
+Paste the copied content into your trader file.
 
 ### Mod Selector
 Ticking mod names in the "Mods in use" menu will remove the items from that mod.
