@@ -11,7 +11,7 @@ Helps with Visualizing end editing Loot. Has some Automatic functions for Loot d
 - generated file to have guns spawn with attachements
 - Export back to types.xml
 
-![main window](images/frontend.png)
+![main window](images/frontView.png)
 
 Built upon a MySQL database that will be automatically generated and some manual editing of item links.
 
@@ -58,6 +58,7 @@ Enter a keyword in the Name entry top left and press enter.
 1. In the menubar click file > export types.xml
 
 ### Loading Trader File
+![File Menu](images/file_dropdown.png)  
 The loading of the trader file will set the prices of the items, aswell as the subtypes.  
 For example if you have a handgun category in you trader file, all the items in that category will get the handgun subtype.
 
@@ -89,7 +90,7 @@ Go to Database > Add Items...
 To link items with other items like ammo type to a gun 
 go to Database > Create item links...
 This is useful for the spawning of the item with attachments and for distributing items that have a set rarity.
-![item Linker](images/itemLinker.png)
+![item Linker](images/itemLinker.png)  
 
 The left list is for the parent object like the weapon. 
 The list in the center is a list of all items. Here you can look for the item you want to link to the parent item.
@@ -101,7 +102,7 @@ The list on the right shows all items that are linked to the selected parent obj
 4. when done simply close the window, it will save your progress automatically
 
 ### Trader Editor
-![Trader Editor](images/traderWindow.png)
+![Trader Editor](images/traderWindow.png)  
 On the left you see all subtypes in the database, you can create new ones by changeing the subtypes of items.  
 On the right all items with the selected subtype are listed.  
 If the Checkbox to the left of each item name is checked, the item will be exclude and will not appear in the generated trader category.  This will not delete the item from the database.  
@@ -118,7 +119,8 @@ Paste the copied content into your trader file.
 Ticking mod names in the "Mods in use" menu will remove the items from that mod.
 Items that are in a mod that has been unticked will not export in the types.xml.
 The Items will not be deleted they're just hidden.
-![Mods in Use menu](images/ModsInUse.png)
+If you add your items to the "removed" mods, then they will automatically be hidden on every startup  
+![Mods in Use menu](images/ModsInUse.png)  
 
 ### Setting Rarity
 Nine Rarity types, if this is too many for you just use every second one.
@@ -140,10 +142,9 @@ The Rarity types have multipliers assigned to them:
 
 ### Rarity Distribution
 This method isn't perfect it will only be a rough distribution to work with. You will have to adjust the loot after distribution  
-![Distribution](images/Distrib.png)  
-1. Set the rarity for all items of the type you want to distribute (undefined items will be ignored)
-2. In the dropdown menu select the item type to distribute.
-3. set Target Nominal. it's the nominal amount of all items combined of this type (excluding the items with "undefined" as rarity).
+![Distribution](images/rarityDistribution.png)  
+1. Only visible items will be distributed, filter your view accordingly
+3. set Target Nominal. it's the nominal amount of all visible items combined (excluding the items with "undefined" as rarity).
 4. Only for guns: if Ammo or Mags is ticked the mags and ammo will also be distributed based on gun rarity. For example, if many guns use STANAG it will spawn more often. Same for ammo types.
 5. Click Distribute. This will take a while (working on this), it will still be faster than you doing all of this by hand ;)
 6. Sometimes the nominals don't match what you set them to. Just select the items and edit them with the multiplier slider.
