@@ -9,6 +9,8 @@ Helps with Visualizing end editing Loot. Has some Automatic functions for Loot d
 - Automatically generate distributions based on Rarity
 - distribute linked items (example: if a gun is rare, the ammo is also rare)
 - generated file to have guns spawn with attachements
+- create trader categories with automatic price distribution
+- import current trader file
 - Export back to types.xml
 
 ![main window](images/frontView.png)
