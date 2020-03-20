@@ -28,7 +28,7 @@ For a minimal installation choose these settings (where there is no screenshot l
 
 ~~Choose MYSQL Server x64 and Connector/ODBC 8.0 x64~~  
 For some reason ODBC 8.0 is not working so skip this step and download and install the ODBC 5.3 x64 Driver instead which can be found [here](https://dev.mysql.com/downloads/connector/odbc/5.3.html)
-![MYSQL Server and ODBC 8.0](images/install2.jpg)
+![MYSQL Server and ODBC 8.0](images/MySQLInstaller_wmf1EXdXGJ.png)
 
 Set a Password. I recommend something as simple as `rootroot`. Does not need to be safe. It will be stored in plaintext!
 ![Set Password](images/install3.jpg)
