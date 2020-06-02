@@ -2,7 +2,7 @@
 
 source code available here https://github.com/VincentSchmid/dayzLootEditor  
 DayZ Loot Editor for types.xml.
-Helps with Visualizing end editing Loot. Has some Automatic functions for Loot distribution
+Helps with Visualizing and editing Loot.  It also has some Automatic functions for Loot distribution
 
 - Visualize loot as a list from database
 - Automatically creates Sub-types for weapon items and links items that are used together (guns, ammo, mags,...)
